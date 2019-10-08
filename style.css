@@ -2,10 +2,29 @@ html {
 	font-family: 'Raleway', sans-serif;
 }
 /* EXPERIENCE */
-#experience
+/* .pres {
+	float: left;;
+} */
+
+ul,li
 {
-	background:#406FA4;
+	list-style: none;
 }
+
+section
+{
+	padding:45px 0px 80px 0px;
+}
+section .heading
+{
+	text-align:center;
+	padding-bottom: 40px;
+}
+section .heading h2
+{
+	text-transform: uppercase;
+}
+
 .white-divider
 {
 	width:100px;
@@ -14,6 +33,9 @@ html {
 	margin:0 auto;
 	margin-bottom: 12px;
 }
+
+
+
 #experience .heading h2
 {
 	color:white;
@@ -22,6 +44,7 @@ html {
 {
 	padding:30px 10px;
 	position: relative;
+	
 }
 .timeline:before
 {
@@ -30,8 +53,8 @@ html {
 	position: absolute;
 	content: " ";
 	width: 5px;
-	background-color: #333;
-	left: 50%;
+	background-color: transparent;
+	left: 50vw;
 	margin-left: -2.5px;
 }
 .timeline > li
@@ -48,35 +71,23 @@ html {
 	content: " ";
 	display: table;
 }
-.timeline li .timeline-badge
-{
-	color:#d82c2e;
-	width: 50px;
-	line-height: 50px;
-	font-size: 20px;
-	text-align: center;
-	position: absolute;
-	top: 16px;
-	left: 50%;
-	margin-left: -25px;
-	background-color: #ddd;
-	border-radius: 50%;
-}
+
 .timeline-panel-container
 {
-	width: 50%;
+	width: 50vh;
 	float: left;
 }
 .timeline-panel-container-inverted
 {
-	width: 50%;
+	width: 50vh;
 	float: right;
 }
 .timeline-panel
 {
 	width: 90%;
-	float: right;
-	margin-right: 40px;
+	display: flex;
+	justify-content: space-around;
+	margin-right: 40vh;
 	border: 1px solid #d4d4d4;
 	border-radius: 7px;
 	padding: 20px 25px;
@@ -84,6 +95,7 @@ html {
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
 	background: #fff;
 }
+
 .timeline-panel-container-inverted .timeline-panel
 {
 	float: left;
@@ -91,26 +103,28 @@ html {
 }
 .timeline-panel:after
 {
+	width: 90%;
 	position: absolute;
 	top: 27px;
 	right: -14px;
 	display: inline-block;
 	border-top: 14px solid transparent;
-	border-left: 14px solid #fff;
-	border-right: 0px solid #fff;
+	/* border-left: 14px solid #fff; */
+	/* border-right: 0px solid #fff; */
 	border-bottom: 14px solid transparent;
 	content:" ";
 }
 .timeline-panel-container-inverted .timeline-panel:after
 {
 	border-left-width: 0;
-	border-right-width: 14px;
-	left:-14px;
+	border-right-width: 14vh;
+	left:-14vh;
 	right: auto;
 }
 .timeline-heading h3
 {
-	margin-top: 5px;
+
+	margin-top: 5vh;
 	font-size: 20px
 }
 .timeline-heading h4
@@ -131,7 +145,12 @@ h2{
     display: flex;
     justify-content: space-around;
   }
-  
+
+  img {
+	width: 20vh;
+	height: 20vh;
+}
+
 .row img {
     margin: 0x;
     max-width: 33%;
@@ -140,19 +159,6 @@ h2{
 	border-top-left-radius: 25px;
 	border-top-right-radius: 25px;
 }
-.logo{
-    height: 100%;
-    width: 10%;
-    padding: 30px;
-}
-.topnav{
-    display: flex;
-    justify-content: space-between;
-}
-#myLinks{
-    padding: 30px;
-}
-
 .text-formateur p{
 	margin: 0px;
 	text-align: center;
