@@ -252,6 +252,38 @@ h2{
 	text-align: center;
 }
 
+@media screen and (min-width:549px){
+.button1, .button2{display: none}
+}
+
+@media screen and (max-width:550px){
+
+	.button{
+		display: none;	
+	}
+}
+	
+	.button1 img{
+		background-color: #fff;
+		border-radius: 20px;
+		width: 125px;
+		height: 125px;
+		box-shadow: 2px 2px 2px black;
+	}
+
+	.button2{
+		width: 125px;
+		height: 125px;
+		font-size: 0rem;
+		background-color:#fff;
+		border-radius: 40px;
+	}
+
+
+	.button_section {
+		text-align: center;
+	}
+
 @media screen and (max-width: 961px) {
 	.footer {
 		flex-direction: column;
