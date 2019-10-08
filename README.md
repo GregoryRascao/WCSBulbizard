@@ -1,3 +1,2 @@
-# Ici on présente les élèves de la Wild Code School Bruxelles
-# WCSBulbizard
-# WCSBulbizard
+# Wild Code School Bruxelles
+La Code School des Pokemons
