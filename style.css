@@ -1,6 +1,8 @@
 html {
 	font-family: 'Raleway', sans-serif;
+	margin: 0;
 }
+
 
 ul,li
 {
@@ -22,7 +24,8 @@ section p{
 }
 
 hr{
-    border: 1px solid rgb(237, 108, 109);
+	border: 1px solid rgb(237, 108, 109);
+	width: 50%;
 }
 h2{
     text-transform: uppercase;
@@ -259,7 +262,10 @@ h2{
 /* ------------------------------------------------
 -------------------GREG----------------------------
 --------------------------------------------------*/
-
+#Wild
+{
+	background: url('denim.png');
+}
 .timeline-panel,.timeline-panel-reverse
 {
 	display: flex;
@@ -305,7 +311,7 @@ h2{
 @media screen and (min-width: 961px) {
 	#Wild
 {
-	background:#406FA4;
+	background: url('denim.png');
 }
 .white-divider
 {
