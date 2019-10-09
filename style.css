@@ -115,6 +115,8 @@ h2{
 .button {
 	background-color:#f65454;
 	color: white; 
+	margin-top: 10%;
+	margin-bottom: -6%;
 	box-shadow: none;
 	letter-spacing: 0.3px;
 	text-align: center;
@@ -167,36 +169,67 @@ h2{
 	}
 }
 
+/* ----------------------------------------------------
+----------------------ANTOINE--------------------------
+-----------------------------------------------------*/
+
 @media screen and (min-width:549px){
-.button1, .button2{display: none}
+.button_section2 img{display: none;}
+.button1{display:none}
 }
+
 
 @media screen and (max-width:550px){
 
 	.button{
 		display: none;	
 	}
-}
-	
-	.button1 img{
+
+	.button1{
 		background-color: #fff;
 		border-radius: 20px;
+		box-shadow: 0px 0px 5px rgb(104, 102, 102);
 		width: 125px;
 		height: 125px;
-		box-shadow: 2px 2px 2px black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.button2{
+		background-color: #fff;
+		border-radius: 20px;
+		box-shadow: 0px 0px 5px rgb(104, 102, 102);
 		width: 125px;
 		height: 125px;
-		font-size: 0rem;
-		background-color:#fff;
-		border-radius: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+}
+
+
+	.button1 img{
+		width: 80px;
+		height: 80px;
 	}
 
+	.button2 img{
+		width: 80px;
+		height: 80px;
+	}
 
 	.button_section {
 		text-align: center;
+	}
+	.button_section2{ 
+		display: flex;
+		flex-wrap: wrap;	
+		justify-content: space-around;
+		margin-bottom: -180px;
+		margin-top: -150px;
+
 	}
 
 @media screen and (max-width: 961px) {
