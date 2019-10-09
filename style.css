@@ -216,7 +216,7 @@ h2{
 
 @media screen and (min-width:549px){
 
-	.button_section2 img{
+	.button_section2{
 		display: none;
 	}
 
