@@ -1,11 +1,17 @@
-
-html {
-	font-family: 'varela round', 'Raleway', sans-serif;
-}
-
 body{
 	margin: 0;
 }
+html {
+  font-family: 'varela round', 'Raleway', sans-serif;
+	scroll-behavior: smooth;
+}
+
+  @media (prefers-reduced-motion: reduce) {
+	html {
+	  scroll-behavior: auto;
+	}
+  }
+
 ul,li
 {
 	list-style: none;
@@ -132,10 +138,14 @@ h2{
 }
 
 .button {
+	width: 20%;
 	background-color:#f65454;
+	/* box-shadow: 0px 0px 5px rgb(104, 102, 102); */
 	color: white; 
-	margin-top: 10%;
+	margin-top: 3%;
 	margin-bottom: -6%;
+	margin-left: 5%;
+	margin-right: 5%;
 	box-shadow: none;
 	letter-spacing: 0.3px;
 	text-align: center;
@@ -145,6 +155,10 @@ h2{
 	font-weight: normal;
 	padding: 15px 30px;
 	transition: background-color .2s ease, box-shadow .2s ease;
+}
+
+.button:hover {
+	box-shadow: 0px 0px 15px rgb(104, 102, 102);
 }
 
 .button_section {
@@ -288,7 +302,7 @@ h2{
 --------------------------------------------------*/
 #Wild
 {
-	background: url('denim.png');
+	background: url('denim.png');	
 }
 .timeline-panel,.timeline-panel-reverse
 {
@@ -497,6 +511,8 @@ img {
 /*-------------------
 -------DINU----------
 ------------------ */
+
+
 main {width: 100%; height: auto; display: flex; justify-content: space-around; background: rgb(237, 108, 109)}
 .logo {height: 100%; width: 45%;}
 .menu {height: 100%; width: 30%; background: rgb(237, 108, 109); text-align: left;}
