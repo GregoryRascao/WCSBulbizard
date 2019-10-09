@@ -215,8 +215,14 @@ h2{
 -----------------------------------------------------*/
 
 @media screen and (min-width:549px){
-.button_section2 img{display: none;}
-.button1{display:none}
+
+	.button_section2 img{
+		display: none;
+	}
+
+	.button1{
+		display:none;
+	}
 }
 
 
@@ -248,9 +254,6 @@ h2{
 		align-items: center;
 	}
 	
-}
-
-
 	.button1 img{
 		width: 80px;
 		height: 80px;
@@ -272,6 +275,7 @@ h2{
 		margin-top: -150px;
 
 	}
+}
 
 @media screen and (max-width: 961px) {
 	.footer {
@@ -343,7 +347,7 @@ h2{
   }
 
 
-img {
+.pres img {
 	width: 15vh;
 	height: 20vh;
 }
