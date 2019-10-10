@@ -520,7 +520,11 @@ h2{
 main {width: 100%; height: auto; display: flex; justify-content: space-around; background: rgb(237, 108, 109)}
 .logo {height: 100%; width: 45%;}
 .menu {height: 100%; width: 30%; background: rgb(237, 108, 109); text-align: left;}
-/* .submenu {margin: 5px;font-family: 'Aclonica';font-size: 16px; color: seashell} */
+.caroussel {height: 300; width: auto}
+.mapback {position: relative;
+	     overflow: auto;
+		}
+.tabl {width: 30%; height: 30%;}
 .dropbtn {
     background-color: rgb(237, 108, 109);
     color: white;
