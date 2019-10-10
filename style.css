@@ -246,7 +246,7 @@ h2{
 }
 
 
-@media screen and (max-width:550px){
+@media screen and (max-width:650px){
 
 	.button{
 		display: none;	
@@ -359,8 +359,7 @@ h2{
 }
 .timeline-heading p {
 	font-size: 15px;
-	text-align: justify;
-	padding: 10px;
+	text-align: left;
 }
 .timeline-heading h3, p
 {
@@ -401,9 +400,13 @@ h2{
 	padding: 40px;
 	margin: 40px;
 	border: 0px solid #d4d4d4;
-	border-radius: 7px;
+	border-radius: 2.5%;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
 	background: linear-gradient(to right,#eee 95%, rgb(237, 108, 109) 95%);
+	-webkit-border-radius: 2.5%;
+	-moz-border-radius: 2.5%;
+	-ms-border-radius: 2.5%;
+	-o-border-radius: 2.5%;
 }
 	.timeline-panel-reverse
 {
@@ -488,6 +491,9 @@ h2{
 	width: 50%;
 	float: right;
 }
+.pres img{
+	height: 100%;
+}
 .timeline-panel
 {
 	width: 80%;
@@ -495,7 +501,7 @@ h2{
 	margin-right: 40px;
 	border: 0px solid #d4d4d4;
 	border-radius: 7px;
-	padding: 20px 25px;
+	padding: 0 2.5% 0 2.5%;
 	position: relative;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
 	background: linear-gradient(to right,#eee 97%, rgb(237, 108, 109) 97%);
@@ -533,11 +539,13 @@ h2{
 }
 .timeline-heading h3
 {
+	text-align: left;
 	margin-top: 5px;
 	font-size: 20px
 }
 .timeline-heading h4
 {
+	text-align: left;
 	color: #d82c2e;
 }
 }
@@ -605,7 +613,7 @@ main {
 
 
 /* .submenu {margin: 5px;font-family: 'Aclonica';font-size: 16px; color: seashell} */
-.caroussel {height: 300; width: auto}
+.caroussel {height: 300; width: 100%}
 .mapback {position: relative;
 	     overflow: auto;
 		}

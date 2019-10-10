@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animate.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
     <title>Wild Code School</title>
+    <!-- Dinu---start -->
+    <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            .zoom {
+              padding: 30px;
+              /* background-color: green; */
+              transition: transform .2s;
+              width: 288px;
+              height: 288px;
+              margin: 0 auto;
+            }
+            
+            .zoom:hover {
+              -ms-transform: scale(1.3); 
+              -webkit-transform: scale(1.3);
+              transform: scale(1.3); 
+            }
+            </style>
 </head>
 <body>
  <main>
@@ -29,23 +48,34 @@
                     <ul class="menu2">
                             <li><a href="#1">Formateurs</a></li>
                             <li><a href="#Wild">wIlDeRs</a></li>
-                            <li><a href="#contact">Contacts</a></li>
+                            <li><a href="#contact1">Contacts</a></li>
                         </ul> 
                     </div>
                 </nav> 
                     <br>
         </main>
-
-           <div class="caroussel" style="position: relative; text-align: center">
-            <div class="mapback">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.1609644379278!2d4.357288915745777!3d50.846703479532025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c59e8cd297cb%3A0x5e17c33419e8091d!2sWild%20Code%20School%20Formation%20d%C3%A9veloppeur%20web%20et%20data%20analyst!5e0!3m2!1sfr!2sbe!4v1570640869351!5m2!1sfr!2sbe" width="100%" height="400px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </div>
+           <div class="caroussel" style="position: relative; text-align: center;">
+                <div class="mapback">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.1609644379278!2d4.357288915745777!3d50.846703479532025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c59e8cd297cb%3A0x5e17c33419e8091d!2sWild%20Code%20School%20Formation%20d%C3%A9veloppeur%20web%20et%20data%20analyst!5e0!3m2!1sfr!2sbe!4v1570640869351!5m2!1sfr!2sbe" width="100%" height="400px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                
             
                 <marquee scrollamount="10" direction="left" 
+
                     style=" bottom: 2px; left: 1px; width: 100%; font-size: 15px; letter-spacing: 3px; color:rgb(237, 108, 109); font-style: italic;
+
+                    style="position: absolute; bottom: 2px; left: 1px; width: 100%; font-size: 15px; letter-spacing: 3px; color:rgb(237, 108, 109); font-style: italic;
+
                            text-shadow:5px 5px 10px black; background: white;">
                     - Notre réseau de campus: 19 campus, 5 formations, 7 pays - - + de 1000 entreprises partenaires -  - 90% d’insertion professionnelle - 
-                </marquee>            
+                </marquee><hr>
+                </div> 
+            <div style="display: flexbox; flex-direction: row; align-items: stretch;">
+                    <h2 style="color: rgb(237, 108, 109);">Nos formations</h2>
+                    <img class="zoom" src="Dinu img/metier1.png" alt="Metier1">
+                    <img class="zoom" src="Dinu img/metier2.png" alt="Metier2">
+                    <img class="zoom" src="Dinu img/metier3.png" alt="metier3">
+               
+            </div>
         </div>
 <br id="1"><br>
 <hr>
@@ -59,7 +89,7 @@
     <figure class="image-formateur"><img src="formateurs/etienne-2.jpg" alt="Etienne"/>
     <figcaption class="text-formateur">Etienne Rabin<br>Campus Manager</figcaption>
     </figure>
-    <figure class="image-formateur "><img src="formateurs/François-2.jpg" alt="François"/>
+    <figure class="image-formateur"><img src="formateurs/François-2.jpg" alt="François"/>
     <figcaption class="text-formateur">François Blondeau<br>Campus Manager</figcaption>
     </figure>
 </div>
@@ -288,11 +318,11 @@
         </div>
     </section>
 
-    <section class="button_section2" id="contact" >
-        <p class="button1"><a href="https://www.wildcodeschool.com/fr-FR"><img src="logos WCS/house-2.png"></a></p>
-        <p class="button2"><a href="tel:+330972526394" target="_blank"><img img src="logos WCS/phone-call-2.png"></a></p>
+    <section class="button_section2" id="contact">
+        <p class="button1"><a href="https://www.wildcodeschool.com/fr-FR"><img src="logos WCS/house.png"></a></p>
+        <p class="button2"><a href="tel:+330972526394" target="_blank"><img img src="logos WCS/phone-call.png"></a></p>
     </section>
-    <section class="button_section">
+    <section class="button_section"id="contact1" >
             <button class="button" title="Notre site internet" onclick="window.open('https://www.wildcodeschool.com/fr-FR')">Notre site</button>
             <button class="button" title="Notre numéros de téléphone" onclick="window.open ('tel:+330972526394')">Nous appeler</button>
     </section>
@@ -308,5 +338,4 @@
     <p><a href="#contact">Contact us</a></p>
     <a href="https://www.wildcodeschool.com/fr-FR" target="_blank"><img src="https://www.wildcodeschool.com/assets/logo_white-b3ba5f88186df8d04f5ef8be4c3cc057a49f77b25b2359c4f4b3b13c53e5aeb8.png"></a>
 </footer>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </html>
