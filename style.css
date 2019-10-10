@@ -669,3 +669,24 @@ main {
   .dropdown:hover .dropbtn {
 	  background-color: rgb(237, 108, 109);
 	}
+
+    <!-- Dinu---start -->
+	* {
+	box-sizing: border-box;
+}
+
+.zoom {
+	padding: 30px;
+	/* background-color: green; */
+	transition: transform .2s;
+	width: 288px;
+	height: 288px;
+	margin: 0 auto;
+}
+
+.zoom:hover {
+	-ms-transform: scale(1.3); 
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3); 
+}
+         
