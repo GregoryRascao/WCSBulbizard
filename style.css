@@ -1,7 +1,5 @@
-body{
-	margin: 0;
-}
-html {
+body {
+	margin: 0px;
   font-family: 'varela round', 'Raleway', sans-serif;
 	scroll-behavior: smooth;
 }
@@ -39,8 +37,12 @@ hr{
 h2{
     text-transform: uppercase;
     text-align: center;
-    color:#f65454;
+    color: rgb(237, 108, 109);
 }
+
+/* ------------------------------------------------
+-------------------WCS----------------------------
+--------------------------------------------------*/
 .Head h2{
 	color: white;
 }
@@ -174,14 +176,14 @@ h2{
 
 @media screen and (max-width: 570px) {
 	.formateur img {
-		width: 60%;
+		width: 70%;
 	}
 }
 
 @media screen and (max-width: 570px) {
 	.text-formateur {
-		width: 60%;
-		margin-left: 20%;
+		width: 70%;
+		margin-left: 15%;
 	}
 }
 
@@ -516,35 +518,90 @@ h2{
 -------DINU----------
 ------------------ */
 
+main {
+	width: 100%; 
+	height: 80px; 
+	background: rgb(237, 108, 109)
+}
 
-main {width: 100%; height: auto; display: flex; justify-content: space-around; background: rgb(237, 108, 109)}
-.logo {height: 100%; width: 45%;}
-.menu {height: 100%; width: 30%; background: rgb(237, 108, 109); text-align: left;}
+.logo {
+	height: 80px; 
+	width: 150px;
+}
+
+.container-menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+@media screen and (min-width:650px){
+.menu {
+	display: none;
+}
+}
+
+.menu {
+	height: 100%; 
+	width: 30%; 
+	background: rgb(237, 108, 109); 
+}
+
+@media screen and (max-width:650px){
+.menu2{
+	display: none;
+}
+}
+
+@media screen and (min-width:650px){
+.menu2 a {
+	color: white;
+	text-decoration: none;
+}
+}
+
+@media screen and (min-width:650px){
+.menu2 li {
+	margin: 15px;
+}
+}
+
+@media screen and (min-width:650px){
+.menu2 {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
+}
+
+
+/* .submenu {margin: 5px;font-family: 'Aclonica';font-size: 16px; color: seashell} */
 .caroussel {height: 300; width: auto}
 .mapback {position: relative;
 	     overflow: auto;
 		}
 .tabl {width: 30%; height: 30%;}
 .dropbtn {
-    background-color: rgb(237, 108, 109);
+	background-color: rgb(237, 108, 109);
     color: white;
-    padding: 15px;
     font-size: 15px;
-    border-style: solid; border-width: 2px; border-color: white;
-	margin-top: 25px;
-	margin-right: 2px
-    ;
-      }
+	margin-left: 60px;
+}
   
   .dropdown {
-    position: relative;
+	position: relative;
     display: inline-block;
-    }
+}
+
+.dropdown img{
+	height : 40px;
+	width: 40px;
+	}
   
   .dropdown-content {
     display: none;
-    position: absolute; right: 0px;
-    background-color: #f1f1f1;
+    position: absolute;
+    background-color: white;
 	min-width: 50%;
 	/* width: 100%; */
 	align-self: flex-end;
@@ -554,17 +611,24 @@ main {width: 100%; height: auto; display: flex; justify-content: space-around; b
   }
   
   .dropdown-content a {
-    color: white;
+    color: rgb(237, 108, 109);
     padding: 10px;
     text-decoration: none;
 	display: block;
-	background-color: #f65454;
-	border: 1px solid #ff9696;
+	background-color:white;
+	border: 1px solid white;
 		   
   }
   
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {
+	  background-color: rgb(237, 108, 109);
+	  color: white;
+	}
   
-  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropdown-content {
+	  display: block;
+	}
   
-  .dropdown:hover .dropbtn {background-color: rgb(255, 81, 81);}
+  .dropdown:hover .dropbtn {
+	  background-color: rgb(237, 108, 109);
+	}
