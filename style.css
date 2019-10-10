@@ -594,7 +594,7 @@ main {
 
 
 /* .submenu {margin: 5px;font-family: 'Aclonica';font-size: 16px; color: seashell} */
-.caroussel {height: 300; width: auto}
+.caroussel {height: 300; width: 100%}
 .mapback {position: relative;
 	     overflow: auto;
 		}
