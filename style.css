@@ -18,6 +18,16 @@ ul,li
 	padding: 0;
 }
 
+nav{
+	position: fixed;
+}
+
+.fixed{
+	background-color: rgb(237, 108, 109);
+	width: 100%;
+	z-index: 1;
+}
+
 section
 {
 	padding:45px 0px 80px 0px;
@@ -33,7 +43,7 @@ section p{
 }
 
 hr{
-	border: 1px solid #f65454;
+	border: 1px solid rgb(237, 108, 109);
 	width: 50%;
 }
 h2{
@@ -84,7 +94,7 @@ h2{
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 14px;
-    background-color:#f65454;
+    background-color:rgb(237, 108, 109);
 	color: white;
 	border-bottom-left-radius: 25px;
 	border-bottom-right-radius: 25px;
@@ -97,7 +107,7 @@ h2{
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 14px;
-    background-color:#f65454;
+    background-color:rgb(237, 108, 109);
     color: white;
 	width: 100%;
 }
@@ -145,7 +155,7 @@ h2{
 
 .button {
 	width: 20%;
-	background-color:#f65454;
+	background-color:rgb(237, 108, 109);
 	/* box-shadow: 0px 0px 5px rgb(104, 102, 102); */
 	color: white; 
 	margin-top: 3%;
@@ -327,11 +337,11 @@ h2{
 	border: 0px solid #d4d4d4;
 	border-radius: 7px;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-	background: linear-gradient(to right,#eee 95%, #f65454 95%);
+	background: linear-gradient(to right,#eee 95%, rgb(237, 108, 109) 95%);
 }
 .timeline-panel-reverse{
 	flex-direction: row-reverse;
-	background: linear-gradient(to left,#eee 95%, #f65454 95%);
+	background: linear-gradient(to left,#eee 95%, rgb(237, 108, 109) 95%);
 }
 .timeline-heading{
 	line-height: 1;
@@ -349,7 +359,7 @@ h2{
 .timeline-heading h4
 {
 	text-align: center;
-	color: #f65454;
+	color: rgb(237, 108, 109);
 }
 .row {
     display: flex;
@@ -382,12 +392,12 @@ h2{
 	border: 0px solid #d4d4d4;
 	border-radius: 7px;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-	background: linear-gradient(to right,#eee 95%, #f65454 95%);
+	background: linear-gradient(to right,#eee 95%, rgb(237, 108, 109) 95%);
 }
 	.timeline-panel-reverse
 {
 	flex-direction: column-reverse;
-	background: linear-gradient(to left,#eee 95%, #f65454 95%);
+	background: linear-gradient(to left,#eee 95%, rgb(237, 108, 109) 95%);
 }
 	.pres img
 {
@@ -445,7 +455,7 @@ h2{
 }
 .timeline li .timeline-badge
 {
-	color:#f65454;
+	color:rgb(237, 108, 109);
 	width: 50px;
 	line-height: 50px;
 	font-size: 20px;
@@ -477,10 +487,10 @@ h2{
 	padding: 20px 25px;
 	position: relative;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-	background: linear-gradient(to right,#eee 97%, #f65454 97%);
+	background: linear-gradient(to right,#eee 97%, rgb(237, 108, 109) 97%);
 }
 .timeline-panel-reverse{
-	background: linear-gradient(to left,#eee 97%, #f65454 97%);
+	background: linear-gradient(to left,#eee 97%, rgb(237, 108, 109) 97%);
 }
 .timeline-panel-container-inverted .timeline-panel
 {
@@ -495,8 +505,8 @@ h2{
 	right: -14px;
 	display: inline-block;
 	border-top: 14px solid transparent;
-	border-left: 14px solid #f65454;
-	border-right: 0px solid #f65454;
+	border-left: 14px solid rgb(237, 108, 109);
+	border-right: 0px solid rgb(237, 108, 109);
 	border-bottom: 14px solid transparent;
 	content:" ";
 }
