@@ -1,16 +1,19 @@
-
-html {
-	font-family: 'Raleway', 'Varela Round', sans-serif;
-}
-
 body {
 	margin: 0px;
+  font-family: 'varela round', 'Raleway', sans-serif;
+	scroll-behavior: smooth;
 }
 
+  @media (prefers-reduced-motion: reduce) {
+	html {
+	  scroll-behavior: auto;
+	}
+  }
 
 ul,li
 {
 	list-style: none;
+	padding: 0;
 }
 
 section
@@ -28,7 +31,7 @@ section p{
 }
 
 hr{
-	border: 1px solid rgb(237, 108, 109);
+	border: 1px solid #f65454;
 	width: 50%;
 }
 h2{
@@ -40,7 +43,13 @@ h2{
 /* ------------------------------------------------
 -------------------WCS----------------------------
 --------------------------------------------------*/
-
+.Head h2{
+	color: white;
+}
+.Head hr{
+	border: 1px solid white;
+	width: 50%;
+}
 
 /* ------------------------------------------------
 -------------------Astridadada----------------------------
@@ -131,10 +140,14 @@ h2{
 }
 
 .button {
+	width: 20%;
 	background-color:#f65454;
+	/* box-shadow: 0px 0px 5px rgb(104, 102, 102); */
 	color: white; 
-	margin-top: 10%;
+	margin-top: 3%;
 	margin-bottom: -6%;
+	margin-left: 5%;
+	margin-right: 5%;
 	box-shadow: none;
 	letter-spacing: 0.3px;
 	text-align: center;
@@ -144,6 +157,10 @@ h2{
 	font-weight: normal;
 	padding: 15px 30px;
 	transition: background-color .2s ease, box-shadow .2s ease;
+}
+
+.button:hover {
+	box-shadow: 0px 0px 15px rgb(104, 102, 102);
 }
 
 .button_section {
@@ -200,8 +217,14 @@ h2{
 -----------------------------------------------------*/
 
 @media screen and (min-width:549px){
-.button_section2 img{display: none;}
-.button1{display:none}
+
+	.button_section2{
+		display: none;
+	}
+
+	.button1{
+		display:none;
+	}
 }
 
 
@@ -233,9 +256,6 @@ h2{
 		align-items: center;
 	}
 	
-}
-
-
 	.button1 img{
 		width: 80px;
 		height: 80px;
@@ -257,6 +277,7 @@ h2{
 		margin-top: -150px;
 
 	}
+}
 
 @media screen and (max-width: 961px) {
 	.footer {
@@ -287,7 +308,7 @@ h2{
 --------------------------------------------------*/
 #Wild
 {
-	background: url('denim.png');
+	background: url('denim.png');	
 }
 .timeline-panel,.timeline-panel-reverse
 {
@@ -295,29 +316,40 @@ h2{
 	justify-content: space-around;
 	padding: 40px;
 	margin: 40px;
-	border: 1px solid #d4d4d4;
+	border: 0px solid #d4d4d4;
 	border-radius: 7px;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-	background: #fff;
+	background: linear-gradient(to right,#eee 95%, #f65454 95%);
 }
 .timeline-panel-reverse{
 	flex-direction: row-reverse;
+	background: linear-gradient(to left,#eee 95%, #f65454 95%);
 }
-
-.timeline-heading h3
+.timeline-heading{
+	line-height: 1;
+}
+.timeline-heading p {
+	font-size: 15px;
+	text-align: justify;
+	padding: 10px;
+}
+.timeline-heading h3, p
 {
+	text-align: center;
 	font-size: 20px
 }
 .timeline-heading h4
 {
-	color: #d82c2e;
+	text-align: center;
+	color: #f65454;
 }
 .row {
     display: flex;
     justify-content: space-around;
   }
 
-  img {
+
+.pres img {
 	width: 15vh;
 	height: 20vh;
 }
@@ -329,6 +361,31 @@ h2{
     vertical-align: middle;
 	border-top-left-radius: 25px;
 	border-top-right-radius: 25px;
+}
+
+@media screen and (max-width:530px){
+	.timeline-panel,.timeline-panel-reverse
+{
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-around;
+	padding: 40px;
+	margin: 40px;
+	border: 0px solid #d4d4d4;
+	border-radius: 7px;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+	background: linear-gradient(to right,#eee 95%, #f65454 95%);
+}
+	.timeline-panel-reverse
+{
+	flex-direction: column-reverse;
+	background: linear-gradient(to left,#eee 95%, #f65454 95%);
+}
+	.pres img
+{
+	width: 100%;
+	height: auto;
+}
 }
 
 @media screen and (min-width: 961px) {
@@ -360,13 +417,13 @@ h2{
 	position: absolute;
 	content: " ";
 	width: 5px;
-	background-color: #333;
+	background-color: #fff;
 	left: 50%;
 	margin-left: -2.5px;
 }
 .timeline > li
 {
-	margin-bottom: 20px;
+	margin-bottom: -100px;
 	position: relative;
 }
 .timeline > li:after
@@ -380,7 +437,7 @@ h2{
 }
 .timeline li .timeline-badge
 {
-	color:#d82c2e;
+	color:#f65454;
 	width: 50px;
 	line-height: 50px;
 	font-size: 20px;
@@ -407,12 +464,15 @@ h2{
 	width: 80%;
 	float: right;
 	margin-right: 40px;
-	border: 1px solid #d4d4d4;
+	border: 0px solid #d4d4d4;
 	border-radius: 7px;
 	padding: 20px 25px;
 	position: relative;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-	background: #fff;
+	background: linear-gradient(to right,#eee 97%, #f65454 97%);
+}
+.timeline-panel-reverse{
+	background: linear-gradient(to left,#eee 97%, #f65454 97%);
 }
 .timeline-panel-container-inverted .timeline-panel
 {
@@ -427,8 +487,8 @@ h2{
 	right: -14px;
 	display: inline-block;
 	border-top: 14px solid transparent;
-	border-left: 14px solid #fff;
-	border-right: 0px solid #fff;
+	border-left: 14px solid #f65454;
+	border-right: 0px solid #f65454;
 	border-bottom: 14px solid transparent;
 	content:" ";
 }
@@ -457,6 +517,7 @@ h2{
 /*-------------------
 -------DINU----------
 ------------------ */
+
 main {
 	width: 100%; 
 	height: 80px; 
@@ -515,6 +576,11 @@ main {
 
 
 /* .submenu {margin: 5px;font-family: 'Aclonica';font-size: 16px; color: seashell} */
+.caroussel {height: 300; width: auto}
+.mapback {position: relative;
+	     overflow: auto;
+		}
+.tabl {width: 30%; height: 30%;}
 .dropbtn {
 	background-color: rgb(237, 108, 109);
     color: white;
