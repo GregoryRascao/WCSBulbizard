@@ -13,8 +13,8 @@ function searchWilder(){
 // -------------------------
 // ---------GREG--------------
 // --------------------------
-
-let Personnage = [{
+function afficherChaquePersonnes (nom){
+let personnages = [{
     name: "William" ,
     job: "Développeur Web Junior",
     description: "Développer dans l’âme,  il aime l’ordinateur et s’en sert avec talent !",
@@ -71,14 +71,14 @@ let Personnage = [{
 {
     name : 'Dinu',
     job: 'Développeur Web Junior',
-    escription: 'Musique et programmation font un duo et c’est ce qu’a voulu Dinu. C’est aux rythme de la musique qu’il code de façon magistral.',
+    description: 'Musique et programmation font un duo et c’est ce qu’a voulu Dinu. C’est aux rythme de la musique qu’il code de façon magistral.',
     image: "photos-individuelles/Dinu.png",
 },
 {
     name : 'Charles-Elie',
     job: 'Développeur Web Junior',
     description: 'Amis de l’ordinateur, il affronte les problèmes avec sourire et détermination.',
-    image: "photos-individuelles/Charles-Elie.png",
+    image: "photos-individuelles/Charles-Ilie.png",
 },
 {
     name : 'Benoit',
@@ -106,11 +106,12 @@ let Personnage = [{
 }
 ];
 
-
-for (let i=0; i < Personnage.length; i++){
-    let people = document.getElementsByClassName("timeline-heading");
-    people[i].innerHTML = '<h3>'+Personnage[i].name+"</h3><h4>"+Personnage[i].job+"</h4><p>"+Personnage[i].description+"</p>";
-    console.log(Personnage[i].name);
-    let imag = document.getElementsByClassName("pres");
-    imag[i].innerHTML = `${'<img src="'+Personnage[i].image+'">'}`;
+    for (let i=0; i < personnages.length; i++){
+        let people = document.getElementsByClassName("timeline-heading");
+        people[i].innerHTML = '<h3>'+personnages[i].name+"</h3><h4>"+personnages[i].job+"</h4><p>"+personnages[i].description+"</p>";
+        let imag = document.getElementsByClassName("pres");
+        imag[i].innerHTML = `${'<img src="'+personnages[i].image+'">'}`;
+    }
+    return num;
 }
+afficherChaquePersonnes();
