@@ -1,26 +1,7 @@
-
-// -------------------------------------------
-// --------------Antoine----------------------
-// -------------------------------------------
-
-
-function searchWilder(){
-    let siteSearch = document.getElementById("siteSearch"); 
-    let surf = siteSearch.value;
-    alert(surf);
-
-    
-const filterPersonnes =  personnages.filter(personne => personne = surf)
-
-//1 Filtrer array Personnages and returnn an array
-
- 
-}
-
 // -------------------------
 // ---------GREG--------------
 // --------------------------
-
+function afficherChaquePersonnes (nom){
 let personnages = [{
     name: "William" ,
     job: "Développeur Web Junior",
@@ -78,14 +59,14 @@ let personnages = [{
 {
     name : 'Dinu',
     job: 'Développeur Web Junior',
-    escription: 'Musique et programmation font un duo et c’est ce qu’a voulu Dinu. C’est aux rythme de la musique qu’il code de façon magistral.',
+    description: 'Musique et programmation font un duo et c’est ce qu’a voulu Dinu. C’est aux rythme de la musique qu’il code de façon magistral.',
     image: "photos-individuelles/Dinu.png",
 },
 {
     name : 'Charles-Elie',
     job: 'Développeur Web Junior',
     description: 'Amis de l’ordinateur, il affronte les problèmes avec sourire et détermination.',
-    image: "photos-individuelles/Charles-Elie.png",
+    image: "photos-individuelles/Charles-Ilie.png",
 },
 {
     name : 'Benoit',
@@ -113,11 +94,33 @@ let personnages = [{
 }
 ];
 
-
-for (let i=0; i < personnages.length; i++){
-    let people = document.getElementsByClassName("timeline-heading");
-    people[i].innerHTML = '<h3>'+personnages[i].name+"</h3><h4>"+personnages[i].job+"</h4><p>"+personnages[i].description+"</p>";
-    console.log(personnages[i].name);
-    let imag = document.getElementsByClassName("pres");
-    imag[i].innerHTML = `${'<img src="'+personnages[i].image+'">'}`;
+    for (let i=0; i < personnages.length; i++){
+        let people = document.getElementsByClassName("timeline-heading");
+        people[i].innerHTML = '<h3>'+personnages[i].name+"</h3><h4>"+personnages[i].job+"</h4><p>"+personnages[i].description+"</p>";
+        let imag = document.getElementsByClassName("pres");
+        imag[i].innerHTML = `${'<img src="'+personnages[i].image+'">'}`;
+    }
+    return num;
 }
+afficherChaquePersonnes();
+
+
+// -------------------------------------------
+// --------------Antoine----------------------
+// -------------------------------------------
+
+
+function searchWilder(){
+    let siteSearch = document.getElementById("siteSearch"); 
+    let surf = siteSearch.value;
+    alert(surf);
+
+    
+
+afficherChaquePersonnes() = personnages.filter(personne => personne = surf);
+
+//1 Filtrer array Personnages and returnn an array
+}
+ 
+
+
