@@ -107,10 +107,14 @@ let Personnage = [{
 ];
 
 
-for (let i=0; i < Personnage.length; i++){
-    let people = document.getElementsByClassName("timeline-heading");
-    people[i].innerHTML = '<h3>'+Personnage[i].name+"</h3><h4>"+Personnage[i].job+"</h4><p>"+Personnage[i].description+"</p>";
-    console.log(Personnage[i].name);
-    let imag = document.getElementsByClassName("pres");
-    imag[i].innerHTML = `${'<img src="'+Personnage[i].image+'">'}`;
+function tropBien (Personne){
+    for (let i=0; i < Personnage.length; i++){
+        let people = document.getElementsByClassName("timeline-heading");
+        people[i].innerHTML = '<h3>'+Personnage[i].name+"</h3><h4>"+Personnage[i].job+"</h4><p>"+Personnage[i].description+"</p>";
+        console.log(Personnage[i].name);
+        let imag = document.getElementsByClassName("pres");
+        imag[i].innerHTML = `${'<img src="'+Personnage[i].image+'">'}`;
+    }
 }
+tropBien();
+
