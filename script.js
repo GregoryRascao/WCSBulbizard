@@ -1,5 +1,10 @@
-const navig = document.getElementById("nav-top");
+// -------------------------------------------
+// --------------Antoine----------------------
+// -------------------------------------------
 
-window.addEventListener("scroll", event =>{
-    navig.classList.add("new");
-});
+
+function searchWilder(){
+    let siteSearch = document.getElementById("siteSearch"); 
+    let surf = siteSearch.value;
+    alert(surf);
+}

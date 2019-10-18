@@ -56,7 +56,7 @@
 <hr>
 <section>
 <div class="formateur">
-    <figure class="image-formateur"><img src="formateurs/celestine-2.jpg" alt="Célestine"/>
+    <figure id="celestine" class="image-formateur"><img src="formateurs/celestine-2.jpg" alt="Célestine"/>
     <figcaption class="text-formateur">Célestine Bonaert<br>Campus Manager</figcaption>
     </figure>
     <figure class="image-formateur"><img src="formateurs/etienne-2.jpg" alt="Etienne"/>
@@ -73,6 +73,14 @@
             <hr>
             <h2 id="2">Les Wilders</h2>
             <hr>
+            <form id="search-gen" >
+                <label for="siteSearch">Search wilder :</label>
+                <div class="autocomplete" style="width:300px;">
+                    <input type="search" id="siteSearch" placeholder="Search" autocomplete="off">
+                </div>
+                <input type="button" onClick="searchWilder()" value="Click Me">
+            </form>
+
         </div>
         <div class="container-fluid">
             <ul class="timeline">
