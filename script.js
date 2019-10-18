@@ -8,13 +8,20 @@ function searchWilder(){
     let siteSearch = document.getElementById("siteSearch"); 
     let surf = siteSearch.value;
     alert(surf);
+
+    
+const filterPersonnes =  personnages.filter(personne => personne = surf)
+
+//1 Filtrer array Personnages and returnn an array
+
+ 
 }
 
 // -------------------------
 // ---------GREG--------------
 // --------------------------
 
-let Personnage = [{
+let personnages = [{
     name: "William" ,
     job: "Développeur Web Junior",
     description: "Développer dans l’âme,  il aime l’ordinateur et s’en sert avec talent !",
@@ -107,10 +114,10 @@ let Personnage = [{
 ];
 
 
-for (let i=0; i < Personnage.length; i++){
+for (let i=0; i < personnages.length; i++){
     let people = document.getElementsByClassName("timeline-heading");
-    people[i].innerHTML = '<h3>'+Personnage[i].name+"</h3><h4>"+Personnage[i].job+"</h4><p>"+Personnage[i].description+"</p>";
-    console.log(Personnage[i].name);
+    people[i].innerHTML = '<h3>'+personnages[i].name+"</h3><h4>"+personnages[i].job+"</h4><p>"+personnages[i].description+"</p>";
+    console.log(personnages[i].name);
     let imag = document.getElementsByClassName("pres");
-    imag[i].innerHTML = `${'<img src="'+Personnage[i].image+'">'}`;
+    imag[i].innerHTML = `${'<img src="'+personnages[i].image+'">'}`;
 }
