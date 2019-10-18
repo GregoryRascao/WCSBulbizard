@@ -230,6 +230,27 @@ h2{
 ----------------------ANTOINE--------------------------
 -----------------------------------------------------*/
 
+#search-gen{
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	height: 30%;
+	width: 40%;
+}
+#search-gen label{
+	font-size: 1.5rem;
+	color: white;
+	margin-right: 2%;
+}
+#search-gen input{
+	height: 2rem;
+	font-size: 1rem;
+}
+
+.search-gen label{
+	/* height: 30px; */
+}
+
 @media screen and (min-width:549px){
 
 	.button_section2{

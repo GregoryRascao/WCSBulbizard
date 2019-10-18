@@ -1,3 +1,15 @@
+
+// -------------------------------------------
+// --------------Antoine----------------------
+// -------------------------------------------
+
+
+function searchWilder(){
+    let siteSearch = document.getElementById("siteSearch"); 
+    let surf = siteSearch.value;
+    alert(surf);
+}
+
 // -------------------------
 // ---------GREG--------------
 // --------------------------
@@ -102,15 +114,3 @@ for (let i=0; i < Personnage.length; i++){
     let imag = document.getElementsByClassName("pres");
     imag[i].innerHTML = `${'<img src="'+Personnage[i].image+'">'}`;
 }
-
-
-
-
-
-
-
-
-
-
-
-
