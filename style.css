@@ -1,17 +1,31 @@
-
-html {
-	font-family: 'Raleway', 'Varela Round' sans-serif;
-}
-
 body {
-	margin: 0;
-	font-family: 'Raleway', 'Varela Round' sans-serif;
+	margin: 0px;
+  	font-family: 'varela round', 'Raleway', sans-serif;
+}
+html{
+	scroll-behavior: smooth;
 }
 
+  @media (prefers-reduced-motion: reduce) {
+	html {
+	  scroll-behavior: auto;
+	}
+  }
 
 ul,li
 {
 	list-style: none;
+	padding: 0;
+}
+
+nav{
+	position: fixed;
+}
+
+.fixed{
+	background-color: rgb(237, 108, 109);
+	width: 100%;
+	z-index: 1;
 }
 
 section
@@ -38,11 +52,26 @@ h2{
     color: rgb(237, 108, 109);
 }
 
+/* ------------------------------------------------
+-------------------WCS----------------------------
+--------------------------------------------------*/
+.Head h2{
+	color: white;
+}
+.Head hr{
+	border: 1px solid white;
+	width: 50%;
+}
 
 
 /* ------------------------------------------------
 -------------------Astridadada----------------------------
 --------------------------------------------------*/
+
+#map {
+	height: 350px;
+	position: inherit !important;
+  }
 
 .formateur {
     display: flex;
@@ -60,8 +89,8 @@ h2{
 .formateur img {
 	width: auto;
 	height: 300px;
-	border-top-left-radius: 12px;
-	border-top-right-radius: 12px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
 }
 
 .text-formateur {
@@ -69,10 +98,10 @@ h2{
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 14px;
-    background-color:#f65454;
+    background-color:rgb(237, 108, 109);
 	color: white;
-	border-bottom-left-radius: 12px;
-	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
 }
 
 .text-formateur p{
@@ -82,7 +111,7 @@ h2{
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 14px;
-    background-color:#f65454;
+    background-color:rgb(237, 108, 109);
     color: white;
 	width: 100%;
 }
@@ -129,10 +158,13 @@ h2{
 }
 
 .button {
-	background-color:#f65454;
+	width: 20%;
+	background-color:rgb(237, 108, 109);
 	color: white; 
-	margin-top: 10%;
+	margin-top: 3%;
 	margin-bottom: -6%;
+	margin-left: 5%;
+	margin-right: 5%;
 	box-shadow: none;
 	letter-spacing: 0.3px;
 	text-align: center;
@@ -141,7 +173,12 @@ h2{
 	font-size: 18px;
 	font-weight: normal;
 	padding: 15px 30px;
+	border: none;
 	transition: background-color .2s ease, box-shadow .2s ease;
+}
+
+.button:hover {
+	box-shadow: 0px 0px 15px rgb(104, 102, 102);
 }
 
 .button_section {
@@ -157,14 +194,14 @@ h2{
 
 @media screen and (max-width: 570px) {
 	.formateur img {
-		width: 60%;
+		width: 70%;
 	}
 }
 
 @media screen and (max-width: 570px) {
 	.text-formateur {
-		width: 60%;
-		margin-left: 20%;
+		width: 70%;
+		margin-left: 15%;
 	}
 }
 
@@ -198,12 +235,21 @@ h2{
 -----------------------------------------------------*/
 
 @media screen and (min-width:549px){
-.button_section2 img{display: none;}
-.button1{display:none}
+
+	.button_section2{
+		display: none;
+	}
+
+	.button1{
+		display:none;
+	}
+	.text-button-mobile{
+		display: none;
+	}
 }
 
 
-@media screen and (max-width:550px){
+@media screen and (max-width:650px){
 
 	.button{
 		display: none;	
@@ -231,9 +277,6 @@ h2{
 		align-items: center;
 	}
 	
-}
-
-
 	.button1 img{
 		width: 80px;
 		height: 80px;
@@ -251,10 +294,18 @@ h2{
 		display: flex;
 		flex-wrap: wrap;	
 		justify-content: space-around;
-		margin-bottom: -180px;
-		margin-top: -150px;
-
+		margin-bottom: -220px;
+		margin-top: -20px;
 	}
+	.text-button-mobile{
+		display: flex;
+		justify-content: space-around;
+	}
+	.text-button1-mobile, .text-button2-mobile{
+		font-size: 0.7rem;
+		text-shadow: 0px 0px 4px grey;
+	}
+}
 
 @media screen and (max-width: 961px) {
 	.footer {
@@ -280,12 +331,16 @@ h2{
 }
 
 
+
 /* ------------------------------------------------
 -------------------GREG----------------------------
 --------------------------------------------------*/
+
+
+
 #Wild
 {
-	background: url('denim.png');
+	background: url('denim.png');	
 }
 .timeline-panel,.timeline-panel-reverse
 {
@@ -293,40 +348,79 @@ h2{
 	justify-content: space-around;
 	padding: 40px;
 	margin: 40px;
-	border: 1px solid #d4d4d4;
+	border: 0px solid #d4d4d4;
 	border-radius: 7px;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-	background: #fff;
+	background: linear-gradient(to right,#eee 95%, rgb(237, 108, 109) 95%);
 }
 .timeline-panel-reverse{
 	flex-direction: row-reverse;
+	background: linear-gradient(to left,#eee 95%, rgb(237, 108, 109) 95%);
 }
-
-.timeline-heading h3
+.timeline-heading{
+	line-height: 1;
+	width: 100%;
+}
+.timeline-heading p {
+	font-size: 15px;
+	text-align: left;
+}
+.timeline-heading h3, p
 {
+	text-align: center;
 	font-size: 20px
 }
 .timeline-heading h4
 {
-	color: #d82c2e;
+	text-align: center;
+	color: rgb(237, 108, 109);
 }
 .row {
     display: flex;
     justify-content: space-around;
   }
 
-  img {
+
+.pres img {
 	width: 15vh;
 	height: 20vh;
 }
 
 .row img {
-    margin: 0x;
     max-width: 33%;
     margin-top: 8px;
     vertical-align: middle;
 	border-top-left-radius: 25px;
 	border-top-right-radius: 25px;
+}
+
+@media screen and (max-width:530px){
+	.timeline-panel,.timeline-panel-reverse
+{
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-around;
+	padding: 40px;
+	margin: 40px;
+	border: 0px solid #d4d4d4;
+	border-radius: 7%;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+	background: linear-gradient(to right,#eee 95%, rgb(237, 108, 109) 95%);
+	-webkit-border-radius: 7%;
+	-moz-border-radius: 7%;
+	-ms-border-radius: 7%;
+	-o-border-radius: 7%;
+}
+	.timeline-panel-reverse
+{
+	flex-direction: column-reverse;
+	background: linear-gradient(to left,#eee 95%, rgb(237, 108, 109) 95%);
+}
+	.pres img
+{
+	width: 100%;
+	height: auto;
+}
 }
 
 @media screen and (min-width: 961px) {
@@ -358,13 +452,13 @@ h2{
 	position: absolute;
 	content: " ";
 	width: 5px;
-	background-color: #333;
+	background-color: #fff;
 	left: 50%;
 	margin-left: -2.5px;
 }
 .timeline > li
 {
-	margin-bottom: 20px;
+	margin-bottom: -100px;
 	position: relative;
 }
 .timeline > li:after
@@ -378,7 +472,7 @@ h2{
 }
 .timeline li .timeline-badge
 {
-	color:#d82c2e;
+	color:rgb(237, 108, 109);
 	width: 50px;
 	line-height: 50px;
 	font-size: 20px;
@@ -400,17 +494,23 @@ h2{
 	width: 50%;
 	float: right;
 }
+.pres img{
+	height: 100%;
+}
 .timeline-panel
 {
 	width: 80%;
 	float: right;
 	margin-right: 40px;
-	border: 1px solid #d4d4d4;
+	border: 0px solid #d4d4d4;
 	border-radius: 7px;
-	padding: 20px 25px;
+	padding: 0 2%;
 	position: relative;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-	background: #fff;
+	background: linear-gradient(to right,#eee 97%, rgb(237, 108, 109) 97%);
+}
+.timeline-panel-reverse{
+	background: linear-gradient(to left,#eee 97%, rgb(237, 108, 109) 97%);
 }
 .timeline-panel-container-inverted .timeline-panel
 {
@@ -425,8 +525,8 @@ h2{
 	right: -14px;
 	display: inline-block;
 	border-top: 14px solid transparent;
-	border-left: 14px solid #fff;
-	border-right: 0px solid #fff;
+	border-left: 14px solid rgb(237, 108, 109);
+	border-right: 0px solid rgb(237, 108, 109);
 	border-bottom: 14px solid transparent;
 	content:" ";
 }
@@ -442,11 +542,13 @@ h2{
 }
 .timeline-heading h3
 {
+	text-align: left;
 	margin-top: 5px;
 	font-size: 20px
 }
 .timeline-heading h4
 {
+	text-align: left;
 	color: #d82c2e;
 }
 }
@@ -455,32 +557,90 @@ h2{
 /*-------------------
 -------DINU----------
 ------------------ */
-main {width: 100%; height: auto; display: flex; justify-content: space-around; background: rgb(237, 108, 109)}
-.logo {height: 100%; width: 45%;}
-.menu {height: 100%; width: 30%; background: rgb(237, 108, 109); text-align: left;}
-/* .submenu {margin: 5px;font-family: 'Aclonica';font-size: 16px; color: seashell} */
+
+main {
+	width: 100%; 
+	height: 80px; 
+	background: rgb(237, 108, 109)
+}
+
+.logo {
+	height: 80px; 
+	width: 150px;
+}
+
+.container-menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+@media screen and (min-width:650px){
+.menu {
+	display: none;
+}
+}
+
+.menu {
+	height: 100%; 
+	width: 30%; 
+	background: rgb(237, 108, 109); 
+}
+
+@media screen and (max-width:650px){
+.menu2{
+	display: none;
+}
+}
+
+@media screen and (min-width:650px){
+.menu2 a {
+	color: white;
+	text-decoration: none;
+}
+}
+
+@media screen and (min-width:650px){
+.menu2 li {
+	margin: 15px;
+}
+}
+
+@media screen and (min-width:650px){
+.menu2 {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
+}
+
+.caroussel {width: 100%}
+.mapback {position: relative;
+	     overflow: auto;
+		}
+.tabl {width: 30%; height: 30%;}
 .dropbtn {
-    background-color: rgb(237, 108, 109);
+	background-color: rgb(237, 108, 109);
     color: white;
-    padding: 15px;
     font-size: 15px;
-    border-style: solid; border-width: 2px; border-color: white;
-	margin-top: 25px;
-	margin-right: 2px
-    ;
-      }
+	margin-left: 50px;
+}
   
   .dropdown {
-    position: relative;
+	position: relative;
     display: inline-block;
-    }
+}
+
+.dropdown img{
+	height : 40px;
+	width: 40px;
+	}
   
   .dropdown-content {
     display: none;
-    position: absolute; right: 0px;
-    background-color: #f1f1f1;
+    position: absolute;
+    background-color: white;
 	min-width: 50%;
-	/* width: 100%; */
 	align-self: flex-end;
 	font-size: 14px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -488,17 +648,58 @@ main {width: 100%; height: auto; display: flex; justify-content: space-around; b
   }
   
   .dropdown-content a {
-    color: white;
+    color: rgb(237, 108, 109);
     padding: 10px;
     text-decoration: none;
 	display: block;
-	background-color: #f65454;
-	border: 1px solid #ff9696;
+	background-color:white;
+	border: 1px solid white;
 		   
   }
   
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {
+	  background-color: rgb(237, 108, 109);
+	  color: white;
+	}
   
-  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropdown-content {
+	  display: block;
+	}
   
-  .dropdown:hover .dropbtn {background-color: rgb(255, 81, 81);}
+  .dropdown:hover .dropbtn {
+	  background-color: rgb(237, 108, 109);
+	}
+
+    
+* {
+	box-sizing: border-box;
+}
+
+.zoom {
+	padding: 30px;
+	transition: transform .2s;
+	width: 288px;
+	height: 288px;
+	margin: 0 auto;
+}
+
+.zoom:hover {
+	-ms-transform: scale(1.3); 
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3); 
+}
+
+.marquee {
+
+	 bottom: 2px; left: 1px; width: 100%; font-size: 15px; letter-spacing: 3px; color:rgb(237, 108, 109); font-style: italic;
+
+	position: absolute; bottom: 2px; left: 1px; width: 99%; font-size: 15px; letter-spacing: 3px; color:rgb(237, 108, 109); font-style: italic;
+
+  text-shadow:5px 5px 10px black; background: white;
+}
+
+.frame{
+	width:100%;
+	height:400px;
+	border:0;
+}
