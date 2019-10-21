@@ -11,23 +11,18 @@
  
 // 3 - Scroll the window to this postion with javascript
 function scrollFunction1() {
-    window.scrollTo(0, 820);}
-
-function scrollFunction2() {
-    window.scrollTo(0, 1444);}
-
-function scrollFunction3() {
-    window.scrollTo(0, 5000);}
-function scrollFunction4() {
-    window.scrollTo(0, 400,);}
+    window.scrollTo(0, 770);
+};
+ function scrollFunction2() {
+    window.scrollTo(0, 1394);
+};
+ function scrollFunction3() {
+    window.scrollTo(0, 5000);
+};
+ function scrollFunction4() {
+    window.scrollTo(0, 350,);
+};
 //Dinu Fin
-
-
-const navig = document.getElementById("nav-top");
-
-window.addEventListener("scroll", event =>{
-    navig.classList.add("new");
-});
 
 
 // ASTRIDA MAP
@@ -263,8 +258,8 @@ function searchWilder(){
 }
     
 
-const displayPerson = personnages.filter(function(personne){
-    return hero.franchise == “”;
-});
+// const displayPerson = personnages.filter(function(personne){
+//     return hero.franchise == “”;
+// });
 //1 Filtrer array Personnages and returnn an array
 
