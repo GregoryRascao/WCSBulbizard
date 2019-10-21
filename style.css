@@ -71,6 +71,7 @@ h2{
 #map {
 	height: 350px;
 	position: inherit !important;
+	margin-bottom: 20px;
   }
 
 .formateur {
