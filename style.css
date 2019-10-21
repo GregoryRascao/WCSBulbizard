@@ -68,6 +68,10 @@ h2{
 -------------------Astridadada----------------------------
 --------------------------------------------------*/
 
+#map {
+	height: 350px;
+	position: inherit !important;
+  }
 
 .formateur {
     display: flex;
@@ -317,10 +321,13 @@ h2{
 	.text-button-mobile{
 		display: flex;
 		justify-content: space-around;
+
 	}
 	.text-button1-mobile, .text-button2-mobile{
 		font-size: 0.7rem;
 		text-shadow: 0px 0px 4px grey;
+	}
+
 	}
 }
 
