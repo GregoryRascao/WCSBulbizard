@@ -1,8 +1,8 @@
 // -------------------------
 // ---------GREG--------------
 // --------------------------
-function afficherChaquePersonnes (nom){
-let personnages = [{
+function showPersons (name, job, description, image){
+let person = [{
     name: "William" ,
     job: "Développeur Web Junior",
     description: "Développer dans l’âme,  il aime l’ordinateur et s’en sert avec talent !",
@@ -93,18 +93,15 @@ let personnages = [{
     image: "photos-individuelles/Marouan.jpeg",
 }
 ];
-
-    for (let i=0; i < personnages.length; i++){
+    for (let i=0; i < person.length; i++){
         let people = document.getElementsByClassName("timeline-heading");
-        people[i].innerHTML = '<h3>'+personnages[i].name+"</h3><h4>"+personnages[i].job+"</h4><p>"+personnages[i].description+"</p>";
-        let imag = document.getElementsByClassName("pres");
-        imag[i].innerHTML = `${'<img src="'+personnages[i].image+'">'}`;
+        people[i].innerHTML = '<h3>'+person[i].name+"</h3><h4>"+person[i].job+"</h4><p>"+person[i].description+"</p>";
+        let imag = document.getElementsByClassName("pres");person
+        imag[i].innerHTML = `${'<img src="'+person[i].image+'">'}`;
     }
-    return num;
+    
 }
-afficherChaquePersonnes();
-
-
+showPersons();
 // -------------------------------------------
 // --------------Antoine----------------------
 // -------------------------------------------
@@ -121,7 +118,5 @@ const displayPerson = personnages.filter(function(personne){
     return hero.franchise == “”;
 });
 //1 Filtrer array Personnages and returnn an array
-
- 
 
 
