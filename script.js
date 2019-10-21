@@ -164,17 +164,6 @@ Element.prototype.appendChild = function (element) {
 // -------------------------
 // ---------GREG--------------
 // --------------------------
-function showPersons (persons){
-
-    console.log("In function show personns: ", persons);
-    for (let i=0; i < persons.length; i++){
-        let people = document.getElementsByClassName("timeline-heading");
-        people[i].innerHTML = '<h3>'+persons[i].name+"</h3><h4>"+persons[i].job+"</h4><p>"+persons[i].description+"</p>";
-        let imag = document.getElementsByClassName("pres");
-        imag[i].innerHTML = `${'<img src="'+persons[i].image+'">'}`;
-    }
-}
-
 
 let wilders = [{
     name: "William" ,
@@ -268,7 +257,55 @@ let wilders = [{
 }
 ];
 
-showPersons(wilders);
+
+const profileWilder = document.getElementById ("students");
+
+const studentsElements = () => {
+
+    const studentsElements = `
+    <ul class="timeline">
+    <li>
+        <div class="timeline-panel-container">
+            <div class="timeline-panel">
+                <div class="timeline-heading"></div>
+                <div class="pres"></div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="timeline-panel-container-inverted">
+            <div class="timeline-panel-reverse timeline-panel">
+                <div class="timeline-heading"></div>
+                <div class="pres"></div>
+            </div>
+        </div>
+    </li>
+    </ul>` 
+
+    for (let i=0; i < wilders.length; i++){
+        console.log (wilders[i]);
+   };
+
+   return profileWilder.insertAdjacentHTML("beforeend", studentsElements);
+
+}
+
+studentsElements();
+
+
+showPersons = (persons) => {
+
+        for (let i=0; i < wilders.length; i++){
+        let people = document.getElementsByClassName("timeline-heading");
+        people[i].innerHTML = `<h3>${wilders[i].name}</h3><h4>${wilders[i].job}</h4><p>${wilders[i].description}</p>`;
+        let imag = document.getElementsByClassName("pres");
+        imag[i].innerHTML = `${'<img src="'+wilders[i].image+'">'}`;
+    }
+};
+
+
+
+showPersons();
 
 // -------------------------------------------
 // --------------Antoine----------------------
