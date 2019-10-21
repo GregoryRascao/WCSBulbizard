@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -33,9 +34,9 @@
                 </nav> 
                     <br>
         </main>
-        <div class="caroussel" style="position: relative; text-align: center;">
+           <div class="caroussel" style="position: relative; text-align: center;">
                 <div class="mapback">
-                    <div id="map"></div>
+                    <iframe class="frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.1609644379278!2d4.357288915745777!3d50.846703479532025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c59e8cd297cb%3A0x5e17c33419e8091d!2sWild%20Code%20School%20Formation%20d%C3%A9veloppeur%20web%20et%20data%20analyst!5e0!3m2!1sfr!2sbe!4v1570640869351!5m2!1sfr!2sbe" allowfullscreen=""></iframe>
                     <p class="marquee">
                         - Notre réseau de campus: 19 campus, 5 formations, 7 pays - - + de 1000 entreprises partenaires -  - 90% d’insertion professionnelle - 
                     </p>
@@ -47,15 +48,16 @@
                     <img class="zoom" src="Dinu-img/metier1.png" alt="Metier1">
                     <img class="zoom" src="Dinu-img/metier2.png" alt="Metier2">
                     <img class="zoom" src="Dinu-img/metier3.png" alt="metier3">
-                </div>
-        </section>
+               
+            </div>
+        </div>
 <br id="1"><br>
 <hr>
 <h2>Formateurs</h2>
 <hr>
 <section>
 <div class="formateur">
-    <figure class="image-formateur"><img src="formateurs/celestine-2.jpg" alt="Célestine"/>
+    <figure id="celestine" class="image-formateur"><img src="formateurs/celestine-2.jpg" alt="Célestine"/>
     <figcaption class="text-formateur">Célestine Bonaert<br>Campus Manager</figcaption>
     </figure>
     <figure class="image-formateur"><img src="formateurs/etienne-2.jpg" alt="Etienne"/>
@@ -72,6 +74,12 @@
             <hr>
             <h2 id="2">Les Wilders</h2>
             <hr>
+            <form id="search-gen" >
+                <label for="siteSearch">Search wilder :</label>
+                    <input type="text" id="siteSearch" placeholder="Search" autocomplete="off">
+                <input type="button" onClick="searchWilder()" value="Click Me">
+            </form>
+
         </div>
         <div class="container-fluid">
             <ul class="timeline">
@@ -99,174 +107,102 @@
                         </div>
                     </div>
                 </li>
-                <!-- <li>
+                <li>
                     <div class="timeline-panel-container-inverted">
                         <div class="timeline-panel-reverse timeline-panel">
-                            <div class="timeline-heading">
-                                <h3>Pierre</h3>
-                                <h4>Développeur Web Junior</h4>
-                                <p>Nouveau logement, nouveau départ. C’est avec Zénitude qu’il vous entraîne dans son univers fabuleux du web développer.</p>
-                            </div>
-                            <div class="pres">
-                                <img src="photos-individuelles/Pierre.png" alt="Pierre">
-                            </div>
+                            <div class="timeline-heading"></div>
+                            <div class="pres"></div>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="timeline-panel-container">
                         <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h3>Nicolas</h3>
-                                <h4>Développeur Web Junior</h4>
-                                <p>Bon combattant, il terrasse la langage HTML et CSS pour vous offrir un rendu parfait.</p>
-                            </div>
-                            <div class="pres">
-                                <img src="photos-individuelles/Nicolas.png" alt="Nicolas">
-                            </div>
+                            <div class="timeline-heading"></div>
+                            <div class="pres"></div>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="timeline-panel-container-inverted">
                         <div class="timeline-panel-reverse timeline-panel">
-                            <div class="timeline-heading">
-                                <h3>Maxime</h3>
-                                <h4>Développeur Web Junior</h4>
-                                <p>Déjà avancé dans le domaine, il partage, participe et parle de ses connaissances. </p>
-                            </div>
-                            <div class="pres">
-                                <img src="photos-individuelles/Maxime.png" alt="Maxime">
-                            </div>
+                            <div class="timeline-heading"></div>
+                            <div class="pres"></div>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="timeline-panel-container">
                             <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Marine</h3>
-                                    <h4>Développeur Web Junior</h4>
-                                    <p>Ne vous fiez pas aux apparences. Sa discrétions cache un talent hors du commun.  </p>
-                                </div>
-                                <div class="pres">
-                                    <img src="photos-individuelles/Marine.png" alt="Marine">
-                                </div>
+                                <div class="timeline-heading"></div>
+                                <div class="pres"></div>
                             </div>
                         </div>
                 </li>
                 <li>
                     <div class="timeline-panel-container-inverted">
                             <div class="timeline-panel-reverse timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Gregory</h3>
-                                    <h4>Développeur Web Junior</h4>
-                                    <p>Un français pas comme les autres. Il aime partager sa passion de la programmation. Rien ne lui échappe.</p>
-                                </div>
-                            <div class="pres">
-                                <img src="photos-individuelles/Gregory.png" alt="Gregory">
-                            </div>
+                                <div class="timeline-heading"></div>
+                            <div class="pres"></div>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="timeline-panel-container">
                         <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h3>Ghislain</h3>
-                                <h4>Développeur Web Junior</h4>
-                                <p>Son humour jour avec sa programmation. Plongez-vous dans son monde pour découvrir une personne pleine de ressources.</p>
-                            </div>
-                            <div class="pres">
-                                <img src="photos-individuelles/Ghislain.png" alt="Ghislain">
-                            </div>
+                            <div class="timeline-heading"></div>
+                            <div class="pres"></div>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="timeline-panel-container-inverted">
                         <div class="timeline-panel-reverse timeline-panel">
-                            <div class="timeline-heading">
-                                <h3>Dinu</h3>
-                                <h4>Développeur Web Sénior</h4>
-                                <p>Musique et programmation font un duo et c’est ce qu’a voulu Dinu. C’est aux rythme de la musique qu’il code de façon magistral.</p>
-                            </div>
-                            <div class="pres">
-                                <img src="photos-individuelles/Dinu.png" alt="Dinu">
-                            </div>
+                            <div class="timeline-heading"></div>
+                            <div class="pres"></div>
                         </div>
                     </div>
                 </li>
                 <li>                    
                     <div class="timeline-panel-container">
                         <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h3>Charles-Elie</h3>
-                                <h4>Développeur Web</h4>
-                                <p>Amis de l’ordinateur, il affronte les problèmes avec sourire et détermination.</p>
-                            </div>
-                            <div class="pres">
-                                <img src="photos-individuelles/Charles-Ilie.png" alt="Charles-Elie">
-                            </div>
+                            <div class="timeline-heading"></div>
+                            <div class="pres"></div>
                         </div>
                     </div>
                 </li>
                 <li>                    
                     <div class="timeline-panel-container-inverted">
                         <div class="timeline-panel-reverse timeline-panel">
-                            <div class="timeline-heading">
-                                <h3>Benoit</h3>
-                                <h4>Développeur Web Junior</h4>
-                                <p>Il a toujours voulu proposer son aide à quiconque le souhaites. Il apprend la programmation avec calme et sérénitude.</p>
-                            </div>
-                            <div class="pres">
-                                <img src="photos-individuelles/Benoit.png" alt="Benoit">
-                            </div>
+                            <div class="timeline-heading"></div>
+                            <div class="pres"></div>
                         </div>
                     </div>
                 </li>
                 <li>                    
                     <div class="timeline-panel-container">
                         <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h3>Astrid</h3>
-                                <h4>Développeur Web Sénior</h4>
-                                <p>La maman de la formation, à l’écoute, réactive. C’est avec sa joie de vivre qu’elle combat les démon de git.</p>
-                            </div>
-                            <div class="pres">
-                                <img src="photos-individuelles/Astrid.png" alt="Astrid">
-                            </div>
+                            <div class="timeline-heading"></div>
+                            <div class="pres"></div>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="timeline-panel-container-inverted">
                         <div class="timeline-panel-reverse timeline-panel">
-                            <div class="timeline-heading">
-                                <h3>Antoine</h3>
-                                <h4>Développeur Web</h4>
-                                <p>Nouveau dans le domaine, il apprend lentement mais surement !</p>
-                            </div>
-                            <div class="pres">
-                                <img src="photos-individuelles/Antoine.png" alt="Antoine">
-                            </div>
+                            <div class="timeline-heading"></div>
+                            <div class="pres"></div>
                         </div>
                     </div>
                 </li>
                 <li>                    
                     <div class="timeline-panel-container">
                         <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h3>Marouan</h3>
-                                <h4>Développeur Web Junior</h4>
-                                <p>Wilder à tout faire. Il gère chaque language d'une main de maitre</p>
-                            </div>
-                            <div class="pres">
-                                <img src="photos-individuelles/Marouan.jpeg" alt="Marouan">
-                            </div>
+                            <div class="timeline-heading"></div>
+                            <div class="pres"></div>
                         </div>
                     </div>
-                </li> -->
+                </li>
             </ul>
         </div>
     </section>
@@ -292,7 +228,7 @@
     <a href="https://www.wildcodeschool.com/fr-FR" target="_blank"><img src="https://www.wildcodeschool.com/assets/logo_white-b3ba5f88186df8d04f5ef8be4c3cc057a49f77b25b2359c4f4b3b13c53e5aeb8.png" alt="logo Wild"></a>
 </footer>
 </body>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6bKDrxWEKEL6ZauLSv1me5LSsHs7wi_4&callback=initMap"
-type="text/javascript"></script>
+
 <script src="script.js"></script>
+
 </html>
