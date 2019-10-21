@@ -2,8 +2,7 @@ body {
 	margin: 0px;
   	font-family: 'varela round', 'Raleway', sans-serif;
 }
-html{
-	scroll-behavior: smooth;
+
 }
 
   @media (prefers-reduced-motion: reduce) {
@@ -27,6 +26,11 @@ nav{
 	width: 100%;
 	z-index: 1;
 }
+
+.new a{
+	color: rgb(237, 108, 109);
+}
+
 
 section
 {
@@ -67,7 +71,6 @@ h2{
 /* ------------------------------------------------
 -------------------Astridadada----------------------------
 --------------------------------------------------*/
-
 #map {
 	height: 350px;
 	position: inherit !important;
@@ -234,6 +237,27 @@ h2{
 /* ----------------------------------------------------
 ----------------------ANTOINE--------------------------
 -----------------------------------------------------*/
+
+#search-gen{
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	height: 30%;
+	width: 40%;
+}
+#search-gen label{
+	font-size: 1.5rem;
+	color: white;
+	margin-right: 2%;
+}
+#search-gen input{
+	height: 2rem;
+	font-size: 1rem;
+}
+
+.search-gen label{
+	/* height: 30px; */
+}
 
 @media screen and (min-width:549px){
 
@@ -612,6 +636,7 @@ main {
 	display: flex;
 	flex-direction: row;
 	text-align: center;
+	background-color: rgba(237, 108, 109, 0,65) ;
 }
 }
 
@@ -704,3 +729,8 @@ main {
 	height:400px;
 	border:0;
 }
+
+a {cursor: pointer;}
+html {
+	scroll-behavior: smooth;
+  }
