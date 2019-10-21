@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,27 +18,27 @@
                         <div class="dropdown">
                                 <img class="dropbtn" src="logos-WCS/burger.png" alt="Burger">
                                 <div class="dropdown-content">
-                                  <a onclick="scrollFunction1()">Formateurs</a>
-                                  <a onclick="scrollFunction2()">Wilders</a>
-                                  <a onclick="ScrollToFunction3()">Contacts</a>
+                                    <a onclick="scrollFunction11()">Formateurs</a>
+                                    <a onclick="scrollFunction22()">Wilders</a>
+                                    <a onclick="scrollFunction33()">Contacts</a>
                                 </div>            
                         </div>
                     </div> 
                     <ul class="menu2">
-                            <li><a onclick="scrollFunction1()">Formateurs</a></li>
-                            <li><a onclick="scrollFunction2()">Wilders</a></li>
-                            <li><a onclick="scrollFunction3()">Contacts</a></li>
+                        <li><a onclick="scrollFunction1()">Formateurs</a></li>
+                        <li><a onclick="scrollFunction2()">Wilders</a></li>
+                        <li><a onclick="scrollFunction3()">Contacts</a></li>
                         </ul> 
                     </div>
                 </nav> 
                     <br>
         </main>
-           <div class="caroussel" style="position: relative; text-align: center;">
+        <div class="caroussel" style="position: relative; text-align: center;">
                 <div class="mapback">
-                    <iframe class="frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.1609644379278!2d4.357288915745777!3d50.846703479532025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c59e8cd297cb%3A0x5e17c33419e8091d!2sWild%20Code%20School%20Formation%20d%C3%A9veloppeur%20web%20et%20data%20analyst!5e0!3m2!1sfr!2sbe!4v1570640869351!5m2!1sfr!2sbe" allowfullscreen=""></iframe>
-                    <p class="marquee">
+                    <div id="map"></div>
+                    <!-- <p class="marquee">
                         - Notre réseau de campus: 19 campus, 5 formations, 7 pays - - + de 1000 entreprises partenaires -  - 90% d’insertion professionnelle - 
-                    </p>
+                    </p> -->
                 </div> 
             <div style="align-items: stretch">
                     <hr>
@@ -48,16 +47,15 @@
                     <img class="zoom" src="Dinu-img/metier1.png" alt="Metier1">
                     <img class="zoom" src="Dinu-img/metier2.png" alt="Metier2">
                     <img class="zoom" src="Dinu-img/metier3.png" alt="metier3">
-               
-            </div>
-        </div>
+                </div>
+        </section>
 <br id="1"><br>
 <hr>
 <h2>Formateurs</h2>
 <hr>
 <section>
 <div class="formateur">
-    <figure id="celestine" class="image-formateur"><img src="formateurs/celestine-2.jpg" alt="Célestine"/>
+    <figure class="image-formateur"><img src="formateurs/celestine-2.jpg" alt="Célestine"/>
     <figcaption class="text-formateur">Célestine Bonaert<br>Campus Manager</figcaption>
     </figure>
     <figure class="image-formateur"><img src="formateurs/etienne-2.jpg" alt="Etienne"/>
@@ -69,7 +67,7 @@
 </div>
 </section>
 
-    <section id="Wild">
+       <section id="Wild">
         <div class="Head">
             <hr>
             <h2 id="2">Les Wilders</h2>
@@ -206,7 +204,6 @@
             </ul>
         </div>
     </section>
-
     <section class="button_section2" id="contact">
         <p class="button1"><a href="https://www.wildcodeschool.com/fr-FR"><img src="logos-WCS/house.png" alt="Photo maison"></a></p>
         <p class="button2"><a href="tel:+330972526394" target="_blank"><img src="logos-WCS/phone-call.png" alt="photo telephone"></a></p>
@@ -221,14 +218,14 @@
     </div>
 
 <footer class="footer">
-    <p><a onclick="scrollFunction4()">School</a></p>
-    <p><a onclick="scrollFunction1()">Formateurs</a></p>
-    <p><a onclick="scrollFunction2()">Wilders</a></p>
-    <p><a>Contact us</a></p>
+    <p><a onclick="scrollFunction44()">School</a></p>
+   <p><a onclick="scrollFunction11()">Formateurs</a></p>
+   <p><a onclick="scrollFunction22()">Wilders</a></p>
+    <p><a href="#contact">Contact us</a></p>
     <a href="https://www.wildcodeschool.com/fr-FR" target="_blank"><img src="https://www.wildcodeschool.com/assets/logo_white-b3ba5f88186df8d04f5ef8be4c3cc057a49f77b25b2359c4f4b3b13c53e5aeb8.png" alt="logo Wild"></a>
 </footer>
 </body>
-
 <script src="script.js"></script>
-
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6bKDrxWEKEL6ZauLSv1me5LSsHs7wi_4&callback=initMap" type="text/javascript"></script>
 </html>
+
