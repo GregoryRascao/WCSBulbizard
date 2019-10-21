@@ -1,3 +1,4 @@
+
 // Dinu START
 // 1 - Click on "Formateur"
         
@@ -135,6 +136,7 @@ Element.prototype.appendChild = function (element) {
   
 
   
+
 // -------------------------
 // ---------GREG--------------
 // --------------------------
@@ -255,7 +257,4 @@ const displayPerson = personnages.filter(function(personne){
     return hero.franchise == “”;
 });
 //1 Filtrer array Personnages and returnn an array
-
-
-
 
