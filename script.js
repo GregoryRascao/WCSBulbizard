@@ -114,13 +114,14 @@ function searchWilder(){
     let siteSearch = document.getElementById("siteSearch"); 
     let surf = siteSearch.value;
     alert(surf);
-
+}
     
 
-afficherChaquePersonnes() = personnages.filter(personne => personne = surf);
-
+const displayPerson = personnages.filter(function(personne){
+    return hero.franchise == “”;
+});
 //1 Filtrer array Personnages and returnn an array
-}
+
  
 
 
