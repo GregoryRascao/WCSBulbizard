@@ -114,24 +114,34 @@ Element.prototype.appendChild = function (element) {
       const marker = new google.maps.Marker({position:{lat: villes[i].lat, lng: villes[i].lng}, map: map});
 
     }
-    const contentString = '<div id="content"><h1>Golden Gate Bridge</h1><p>The Golden Gate Bridge is a' +
-				'suspension bridge spanning the Golden Gate, the one-mile-wide (1.6 km) strait connecting San' +
-				'Francisco Bay and the Pacific Ocean. The structure links the American city of San Francisco,' +
-				'California - the northern tip of the San Francisco Peninsula - to Marin County, carrying' +
-				'both U.S. Route 101 and California State Route 1 across the strait. The bridge is one of' +
-				'the most internationally recognized symbols of San Francisco, California, and the United States.' +
-				'It has been declared one of the Wonders of the Modern World by the American Society of Civil' +
-				'Engineers.</p><p>Attribution: Golden Gate Bridge <a href="https://en.wikipedia.org/wiki/Golden_Gate_Bridge">' +
-				'https://en.wikipedia.org/wiki/Golden_Gate_Bridge</a></p></div>';
 
-			const infowindow = new google.maps.InfoWindow({
-				content: contentString
-			});
+    const contentString = 
+      '<p><b>Bruxelles</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+      'sandstone rock formation in the southern part of the '+
+      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+      'south west of the nearest large town, Alice Springs; 450&#160;km '+
+      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+      'Aboriginal people of the area. It has many springs, waterholes, '+
+      'rock caves and ancient paintings. Uluru is listed as a World '+
+      'Heritage Site.</p>'+ '<p>Nous contacter: CAMPUS MANAGER - François Blondeau : +32493466269' + 
+      'Adresse email : francois@wildcodeschool.be</p>';
 
-			marker.addListener('click', function() {
-				infowindow.open(map, marker);
-			});
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  const marker = new google.maps.Marker({
+    position: villes[0],
+    map: map,
+    title: 'Bruxelles'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
   }
+
 
   
 
