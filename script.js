@@ -1,19 +1,6 @@
-
-// -------------------------------------------
-// --------------Antoine----------------------
-// -------------------------------------------
-
-
-function searchWilder(){
-    let siteSearch = document.getElementById("siteSearch"); 
-    let surf = siteSearch.value;
-    alert(surf);
-}
-
 // -------------------------
 // ---------GREG--------------
 // --------------------------
-
 function showPersons (name, job, description, image){
 let person = [{
     name: "William" ,
@@ -106,7 +93,6 @@ let person = [{
     image: "photos-individuelles/Marouan.jpeg",
 }
 ];
-
     for (let i=0; i < person.length; i++){
         let people = document.getElementsByClassName("timeline-heading");
         people[i].innerHTML = '<h3>'+person[i].name+"</h3><h4>"+person[i].job+"</h4><p>"+person[i].description+"</p>";
@@ -116,5 +102,21 @@ let person = [{
     
 }
 showPersons();
+// -------------------------------------------
+// --------------Antoine----------------------
+// -------------------------------------------
+
+
+function searchWilder(){
+    let siteSearch = document.getElementById("siteSearch"); 
+    let surf = siteSearch.value;
+    alert(surf);
+}
+    
+
+const displayPerson = personnages.filter(function(personne){
+    return hero.franchise == “”;
+});
+//1 Filtrer array Personnages and returnn an array
 
 
