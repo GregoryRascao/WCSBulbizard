@@ -157,15 +157,12 @@ Element.prototype.appendChild = function (element) {
   setTimeout(function () { infowindow.close(); }, 5000);
  }
 
-  
-
-  
 
 // -------------------------
 // ---------GREG--------------
 // --------------------------
 
-let wilders = [{
+const wilders = [{
     name: "William" ,
     job: "Développeur Web Junior",
     description: "Développer dans l’âme,  il aime l’ordinateur et s’en sert avec talent !",
@@ -260,52 +257,46 @@ let wilders = [{
 
 const profileWilder = document.getElementById ("students");
 
-const studentsElements = () => {
 
-    const studentsElements = `
-    <ul class="timeline">
-    <li>
-        <div class="timeline-panel-container">
-            <div class="timeline-panel">
-                <div class="timeline-heading"></div>
-                <div class="pres"></div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="timeline-panel-container-inverted">
-            <div class="timeline-panel-reverse timeline-panel">
-                <div class="timeline-heading"></div>
-                <div class="pres"></div>
-            </div>
-        </div>
-    </li>
-    </ul>` 
+renderNormalContainer = (normal) => {
 
-    for (let i=0; i < wilders.length; i++){
-        console.log (wilders[i]);
-   };
-
-   return profileWilder.insertAdjacentHTML("beforeend", studentsElements);
+   
+        const normalContainer = `
+    <div class="timeline-panel-container">
+        <div class="timeline-panel">
+        <div class="timeline-heading"><h3>${normal.name}</h3><h4>${normal.job}</h4><p>${normal.description}</p></div>
+        <div class="pres">${'<img src="'+normal.image+'">'}</div>
+    </div>
+    </div> 
+    `
+    return normalContainer;
 
 }
 
-studentsElements();
+renderInverseContainer = (inverse) => {
+    const inverseContainer = `
+    <div class="timeline-panel-container-inverted">
+        <div class="timeline-panel-reverse timeline-panel">
+        <div class="timeline-heading"><h3>${inverse.name}</h3><h4>${inverse.job}</h4><p>${inverse.description}</p></div>
+        <div class="pres">${'<img src="'+inverse.image+'">'}</div>
+    </div>
+    </div>
+    `;
+    return inverseContainer;    
+}
 
-
-showPersons = (persons) => {
-
-        for (let i=0; i < wilders.length; i++){
-        let people = document.getElementsByClassName("timeline-heading");
-        people[i].innerHTML = `<h3>${wilders[i].name}</h3><h4>${wilders[i].job}</h4><p>${wilders[i].description}</p>`;
-        let imag = document.getElementsByClassName("pres");
-        imag[i].innerHTML = `${'<img src="'+wilders[i].image+'">'}`;
+renderWildersComponent = (list) => {
+    for (let i = 0; i < list.length; i++){
+        let component = `
+        <li>${renderNormalContainer(list[i])}</li>
+        <li>${renderInverseContainer(list[i])}</li>
+    `
+        profileWilder.insertAdjacentHTML('beforeend', component);
     }
-};
+}
 
+renderWildersComponent(wilders);
 
-
-showPersons();
 
 // -------------------------------------------
 // --------------Antoine----------------------
