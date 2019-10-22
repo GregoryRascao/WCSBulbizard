@@ -286,12 +286,18 @@ renderInverseContainer = (inverse) => {
 }
 
 renderWildersComponent = (list) => {
-    for (let i = 0; i < list.length; i++){
+    for (let i = 0; i < (list.length); i++){
         let component = `
         <li>${renderNormalContainer(list[i])}</li>
         <li>${renderInverseContainer(list[i])}</li>
     `
-        profileWilder.insertAdjacentHTML('beforeend', component);
+    if (i%2){
+        let componentImpar = `<li>${renderInverseContainer(list[i])}</li>`
+        profileWilder.insertAdjacentHTML('beforeend', componentImpar);
+        } else{
+        let componentPar = `<li>${renderNormalContainer(list[i])}</li>`
+        profileWilder.insertAdjacentHTML('beforeend', componentPar);
+        }
     }
 }
 
