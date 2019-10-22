@@ -74,79 +74,95 @@ Element.prototype.appendChild = function (element) {
   //   "biarritz" : {"lat": 43.4832523, "lng": -1.5592776}
   // }
 
-   const villes = [{
-     name: "Bruxelles",
-     lat: 50.8467035,
-     lng: 4.3572889,
-     description: "Curabitur eu aliquam libero, nec pellentesque lacus"
+  const villes = [{
+    name: "Bruxelles",
+    lat: 50.8467035,
+    lng: 4.3572889
  },
  {
-     name: "Paris",
-     lat: 48.866667,
-     lng: 2.333333,
-     description: "Curabitur eu aliquam libero, nec pellentesque lacus"
-    
+    name: "Paris",
+    lat: 48.866667,
+    lng: 2.333333
  },
  {
-     name: "Biarritz",
-     lat: 43.4832523,
-     lng: -1.5592776,
-     description: "Curabitur eu aliquam libero, nec pellentesque lacus"
+    name: "Biarritz",
+    lat: 43.4832523,
+    lng: -1.5592776
  }
  ];
-
-
-  function initMap() {
-    // The location of Bruxelles
-    // const bruxelles = {lat: 50.8467035, lng: 4.3572889};
-    // const paris = {lat: 48.866667, lng: 2.333333};
-    // The map, centered at Bruxelles
-    const map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 15, center: villes[0]});
-    // The marker, positioned at Bruxelles
-    // let marker = new google.maps.Marker({position: ville.bruxelles, map: map});
-    for( let i=0; i<villes.length; i++){
-      const marker = new google.maps.Marker({position:{lat: villes[i].lat, lng: villes[i].lng}, map: map});
-
-    }
-
-    const contentString = 
-      '<p><b>Bruxelles</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-      'sandstone rock formation in the southern part of the '+
-      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-      'south west of the nearest large town, Alice Springs; 450&#160;km '+
-      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-      'Aboriginal people of the area. It has many springs, waterholes, '+
-      'rock caves and ancient paintings. Uluru is listed as a World '+
-      'Heritage Site.</p>'+ '<p>Nous contacter: CAMPUS MANAGER - François Blondeau : +32493466269' + 
-      'Adresse email : francois@wildcodeschool.be</p>';
-
+ function initMap() {
+   // The location of Bruxelles
+   // const bruxelles = {lat: 50.8467035, lng: 4.3572889};
+   // const paris = {lat: 48.866667, lng: 2.333333};
+   // The map, centered at Bruxelles
+   const map = new google.maps.Map(
+       document.getElementById('map'), {zoom: 15, center: villes[0]});
+   // The marker, positioned at Bruxelles
+   // let marker = new google.maps.Marker({position: ville.bruxelles, map: map});
+   for( let i=0; i<villes.length; i++){
+     const marker = new google.maps.Marker({position:{lat: villes[i].lat, lng: villes[i].lng}, map: map});
+   }
+ const newMessages = [{
+  ville: '<p><b>Bruxelles</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+  'sandstone rock formation in the southern part of the '+
+  'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+  'south west of the nearest large town, Alice Springs; 450&#160;km '+
+  '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+  'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+  'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+  'Aboriginal people of the area. It has many springs, waterholes, '+
+  'rock caves and ancient paintings. Uluru is listed as a World '+
+  'Heritage Site.</p>'+ '<p>Nous contacter: CAMPUS MANAGER - François Blondeau : +32493466269' +
+  'Adresse email : francois@wildcodeschool.be</p>'
+ },
+ {
+  ville: '<p><b>Paris</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+  'sandstone rock formation in the southern part of the '+
+  'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+  'south west of the nearest large town, Alice Springs; 450&#160;km '+
+  '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+  'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+  'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+  'Aboriginal people of the area. It has many springs, waterholes, '+
+  'rock caves and ancient paintings. Uluru is listed as a World '+
+  'Heritage Site.</p>'+ '<p>Nous contacter: CAMPUS MANAGER - François Blondeau : +32493466269' +
+  'Adresse email : francois@wildcodeschool.be</p>'
+ },
+ {
+  ville: '<p><b>Biarritz</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+  'sandstone rock formation in the southern part of the '+
+  'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+  'south west of the nearest large town, Alice Springs; 450&#160;km '+
+  '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+  'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+  'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+  'Aboriginal people of the area. It has many springs, waterholes, '+
+  'rock caves and ancient paintings. Uluru is listed as a World '+
+  'Heritage Site.</p>'+ '<p>Nous contacter: CAMPUS MANAGER - François Blondeau : +32493466269' +
+  'Adresse email : francois@wildcodeschool.be</p>'
+ }
+ ];
+  for (let i = 0; i < newMessages.length; ++i) {
+    const marker = new google.maps.Marker({position:{lat: villes[i].lat, lng: villes[i].lng}, map: map});
+    attachNewMessages(marker, newMessages[i].ville);
+  }
+ }
+ function attachNewMessages(marker, newMessages) {
   const infowindow = new google.maps.InfoWindow({
-    content: contentString
-  });
-
-  const marker = new google.maps.Marker({
-    position: villes[0],
-    map: map,
-    title: 'Bruxelles'
+    content: newMessages
   });
   marker.addListener('click', function() {
-    infowindow.open(map, marker);
+    infowindow.open(marker.get('map'), marker);
   });
-  }
+  setTimeout(function () { infowindow.close(); }, 5000);
+ }
 
-
-  
-
-  
 
 // -------------------------
 // ---------GREG--------------
 // --------------------------
-function showPersons (name, job, description, image){
-let person = [{
+
+let wilders = [{
     name: "William" ,
     job: "Développeur Web Junior",
     description: "Développer dans l’âme,  il aime l’ordinateur et s’en sert avec talent !",
@@ -237,15 +253,57 @@ let person = [{
     image: "photos-individuelles/Marouan.jpeg",
 }
 ];
-    for (let i=0; i < person.length; i++){
-        let people = document.getElementsByClassName("timeline-heading");
-        people[i].innerHTML = '<h3>'+person[i].name+"</h3><h4>"+person[i].job+"</h4><p>"+person[i].description+"</p>";
-        let imag = document.getElementsByClassName("pres");person
-        imag[i].innerHTML = `${'<img src="'+person[i].image+'">'}`;
-    }
-    
+
+
+const profileWilder = document.getElementById ("students");
+
+
+renderNormalContainer = (normal) => {
+
+   
+        const normalContainer = `
+    <div class="timeline-panel-container">
+        <div class="timeline-panel">
+        <div class="timeline-heading"><h3>${normal.name}</h3><h4>${normal.job}</h4><p>${normal.description}</p></div>
+        <div class="pres">${'<img src="'+normal.image+'">'}</div>
+    </div>
+    </div> 
+    `
+    return normalContainer;
+
 }
-showPersons();
+
+renderInverseContainer = (inverse) => {
+    const inverseContainer = `
+    <div class="timeline-panel-container-inverted">
+        <div class="timeline-panel-reverse timeline-panel">
+        <div class="timeline-heading"><h3>${inverse.name}</h3><h4>${inverse.job}</h4><p>${inverse.description}</p></div>
+        <div class="pres">${'<img src="'+inverse.image+'">'}</div>
+    </div>
+    </div>
+    `;
+    return inverseContainer;    
+}
+
+renderWildersComponent = (list) => {
+    for (let i = 0; i < (list.length); i++){
+        let component = `
+        <li>${renderNormalContainer(list[i])}</li>
+        <li>${renderInverseContainer(list[i])}</li>
+    `
+    if (i%2){
+        let componentImpar = `<li>${renderInverseContainer(list[i])}</li>`
+        profileWilder.insertAdjacentHTML('beforeend', componentImpar);
+        } else{
+        let componentPar = `<li>${renderNormalContainer(list[i])}</li>`
+        profileWilder.insertAdjacentHTML('beforeend', componentPar);
+        }
+    }
+}
+
+renderWildersComponent(wilders);
+
+
 // -------------------------------------------
 // --------------Antoine----------------------
 // -------------------------------------------
@@ -254,12 +312,16 @@ showPersons();
 function searchWilder(){
     let siteSearch = document.getElementById("siteSearch"); 
     let surf = siteSearch.value;
-    alert(surf);
+    return surf;
 }
-    
 
-// const displayPerson = personnages.filter(function(personne){
-//     return hero.franchise == “”;
-// });
-//1 Filtrer array Personnages and returnn an array
-
+var filterWilders = () =>{
+    wilders.filter(function(wilder){
+        let name = searchWilder();
+        if(wilder.name === name){
+            profileWilder.innerHTML = `<li>${renderNormalContainer(wilder)}</li>`;
+            return wilder;
+        }
+        return;     
+    });
+}
