@@ -162,7 +162,7 @@ Element.prototype.appendChild = function (element) {
 // ---------GREG--------------
 // --------------------------
 
-const wilders = [{
+let wilders = [{
     name: "William" ,
     job: "Développeur Web Junior",
     description: "Développer dans l’âme,  il aime l’ordinateur et s’en sert avec talent !",
@@ -312,12 +312,16 @@ renderWildersComponent(wilders);
 function searchWilder(){
     let siteSearch = document.getElementById("siteSearch"); 
     let surf = siteSearch.value;
-    console.log(surf);
+    return surf;
 }
-    
 
-// const displayPerson = personnages.filter(function(personne){
-//     return hero.franchise == “”;
-// });
-//1 Filtrer array Personnages and returnn an array
-
+var filterWilders = () =>{
+    wilders.filter(function(wilder){
+        let name = searchWilder();
+        if(wilder.name === name){
+            profileWilder.innerHTML = `<li>${renderNormalContainer(wilder)}</li>`;
+            return wilder;
+        }
+        return;     
+    });
+}
