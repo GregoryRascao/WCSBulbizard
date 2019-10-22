@@ -77,17 +77,40 @@ Element.prototype.appendChild = function (element) {
   const villes = [{
     name: "Bruxelles",
     lat: 50.8467035,
-    lng: 4.3572889
+    lng: 4.3572889,
+    description: '<p>Installé en plein coeur de <b>Bruxelles</b>, à deux minutes à pied de la Gare Centrale,'+
+    'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+    'le campus de Bruxelles est l endroit idéal où se former aux métiers numériques. '+
+    'Les élèves côtoient quotidiennement un environnement multilingue, multiculturel,'+
+    'et de nombreux porteurs de projets numériques.'+
+    'Le campus est également à proximité immédiate de l écosystème numérique bruxellois.'+
+    '<p>Nous contacter:<br> CAMPUS MANAGER - François Blondeau : +32493466269' +
+    '<br><b>Adresse email</b> : francois@wildcodeschool.be</p>'
  },
  {
     name: "Paris",
     lat: 48.866667,
-    lng: 2.333333
+    lng: 2.333333,
+    description: '<p>Au cœur d un écosystème composé de 20.000 entreprises technologiques,' +
+    ' près de 2.000 startups numériques, plus de 40 incubateurs et'+
+    ' des événements tech d envergure comme Viva Technology,'+
+    ' la Wild Code School de <b>Paris</b> te forme au métier de développeur web.'+
+    ' Notre école numérique est installée à deux pas du plus grand incubateur mondial Station F. '+
+    '</p>'+ '<p>Nous contacter: CAMPUS MANAGER - Anaïs Doladille : +33 (0)7 84 39 08 74' +
+    '<br><b>Adresse email</b> : anais.doladille@wildcodeschool.fr</p>'
  },
  {
     name: "Biarritz",
     lat: 43.4832523,
-    lng: -1.5592776
+    lng: -1.5592776,
+    description: '<p>Le Pays Basque dispose d un écosystème numérique hors-pair dans lequel la Wild Code School est bien intégrée.'+
+    'Située au coeur de la Technopole Izarbel l école collabore avec'+
+    'l Ecole Supérieure des Technologies Industrielles Avancées (ESTIA) et la CCI de'+
+    'Bayonne, l école est en contact direct avec les acteurs et porteurs'+
+    'de projets des incubateurs à forte composante technologique' +
+    '(services et industries numériques, aérospace, conception et fabrication durable, industries de l océan).' +
+    '<p>Nous contacter:<br> CAMPUS MANAGER CAMPUS MANAGER - Marylou Moulon  : +33 (0)7 76 38 22 32'+
+    '<br><b>Adresse email</b> : marylou@wildcodeschool.fr</p>'
  }
  ];
  function initMap() {
@@ -102,54 +125,14 @@ Element.prototype.appendChild = function (element) {
    for( let i=0; i<villes.length; i++){
      const marker = new google.maps.Marker({position:{lat: villes[i].lat, lng: villes[i].lng}, map: map});
    }
- const newMessages = [{
-  ville: '<p><b>Bruxelles</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-  'sandstone rock formation in the southern part of the '+
-  'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-  'south west of the nearest large town, Alice Springs; 450&#160;km '+
-  '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-  'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-  'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-  'Aboriginal people of the area. It has many springs, waterholes, '+
-  'rock caves and ancient paintings. Uluru is listed as a World '+
-  'Heritage Site.</p>'+ '<p>Nous contacter: CAMPUS MANAGER - François Blondeau : +32493466269' +
-  'Adresse email : francois@wildcodeschool.be</p>'
- },
- {
-  ville: '<p><b>Paris</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-  'sandstone rock formation in the southern part of the '+
-  'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-  'south west of the nearest large town, Alice Springs; 450&#160;km '+
-  '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-  'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-  'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-  'Aboriginal people of the area. It has many springs, waterholes, '+
-  'rock caves and ancient paintings. Uluru is listed as a World '+
-  'Heritage Site.</p>'+ '<p>Nous contacter: CAMPUS MANAGER - François Blondeau : +32493466269' +
-  'Adresse email : francois@wildcodeschool.be</p>'
- },
- {
-  ville: '<p><b>Biarritz</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-  'sandstone rock formation in the southern part of the '+
-  'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-  'south west of the nearest large town, Alice Springs; 450&#160;km '+
-  '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-  'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-  'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-  'Aboriginal people of the area. It has many springs, waterholes, '+
-  'rock caves and ancient paintings. Uluru is listed as a World '+
-  'Heritage Site.</p>'+ '<p>Nous contacter: CAMPUS MANAGER - François Blondeau : +32493466269' +
-  'Adresse email : francois@wildcodeschool.be</p>'
- }
- ];
-  for (let i = 0; i < newMessages.length; ++i) {
+  for (let i = 0; i < villes.length; ++i) {
     const marker = new google.maps.Marker({position:{lat: villes[i].lat, lng: villes[i].lng}, map: map});
-    attachNewMessages(marker, newMessages[i].ville);
+    attachVilles(marker, villes[i].description);
   }
  }
- function attachNewMessages(marker, newMessages) {
+ function attachVilles(marker, villes) {
   const infowindow = new google.maps.InfoWindow({
-    content: newMessages
+    content: villes
   });
   marker.addListener('click', function() {
     infowindow.open(marker.get('map'), marker);
