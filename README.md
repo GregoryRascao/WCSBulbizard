@@ -1,2 +1,8 @@
 # Wild Code School Bruxelles
-La Code School des Pokemons
+Un Year Book pour la Wild Code School Bruxelles.
+
+Premier projet réaliser par :
+
+Grégory Rascao
+Antoine Van Lanten
+Dinu Litun
